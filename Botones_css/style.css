@@ -1,0 +1,37 @@
+.boton {
+    font-size: 16px;    /*Tamaño de la fuente*/
+    display: inline-block;
+    text-decoration: none;  /*quita decoracion ej. linea de link*/
+    padding: 10px 5px;  /*espacio dentro de la etiqueta*/
+    border: 1px solid #000000;  /*borde de etiqueta*/
+    color: #ffffff;     /*Color texto*/
+    background: #c3c3c3;    /*fondo color etiqueta "boton"*/
+    }
+    /*cuando se pasa el mouse sobre la etiqueta boton se aplica*/
+    .boton:hover {
+        border: 0px;
+        opacity: 0.7;
+        }
+
+    .boton.azul {
+    background: #092d46; /*color fondo del boton*/
+    }
+
+    .boton.rojo {
+    background: #fa0303;
+    }
+
+    .boton.verde {
+    background: #0cda16;
+    }
+
+    .boton.mediano {
+        font-size: 18px;
+    }
+
+    .boton.redondo {
+        border-radius: 30%; /*radio borde*/
+        }
+        
+        
+             
