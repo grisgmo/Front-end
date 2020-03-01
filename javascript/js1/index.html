@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Javascript</title>
+</head>
+
+<body>
+    <h1>Javascript</h1>
+
+    <form action="" method="POST" id="form1" onsubmit="mensaje()"><!--post:  y get: -->
+        Nombre:<input type="text" name="nombre" id="nombre" />
+        
+        <input type="submit" value="Enviar" />
+        
+    </form>
+    <button id="boton1" onclick="agregar()"> Mensaje</button>
+    <div id="lista"></div>
+   
+   <script>
+
+    function mensaje(){
+        var nameValue = document.getElementById("nombre").value;
+        alert("Hola " + nameValue)
+    }
+    function agregar(){
+        var lista = document.getElementById("lista"); //create a <li> node
+
+        var node = document.createElement("h2");
+        
+        node.innerHTML = "Hola";
+        lista.appendChild(node);
+    }
+    </script>
+</body>
+</html>
