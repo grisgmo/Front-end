@@ -23,12 +23,14 @@ body{
 .menu li a{
     text-decoration: none;
     color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding: 10px ;
 }
 .menu li a:hover{
     text-decoration: none;
     color: black;
     background: rgb(217, 221, 156);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-transform: uppercase;
     border-bottom: 2px solid rgb(37, 37, 35) ;
 }
