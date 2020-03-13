@@ -27,26 +27,45 @@
   '{"empleados":[' +
   '{ "nombre":"John", "apellido":"Doe" },'+
   '{ "nombre":"Anna", "apellido":"Smith" },'+
+<<<<<<< HEAD
   '{ "nombre":"Peter", "apellido":"Jones" }]}';
  
   var obj = JSON.parse(text);
       $("boton1").click(function(){
+=======
+  '{ "nombre":"Peter", "apellido":"Jones" }'
+  ]};
+  var obj = JSON.parse(text);
+      $("boton1").click(function()){
+>>>>>>> 68035aadac436ac8b24ab4a3708ddf3ba9542678
        $("#nombre").html(
          obj.empleados[0].nombre + " " + obj.empleados[0].apellido);
   
         });
+<<<<<<< HEAD
         $("boton2").click(function(){
+=======
+        $("boton2").click(function()){
+>>>>>>> 68035aadac436ac8b24ab4a3708ddf3ba9542678
        $("#nombre").html(
          obj.empleados[1].nombre + " " + obj.empleados[1].apellido);
   
         });
+<<<<<<< HEAD
         $("boton3").click(function(){
+=======
+        $("boton3").click(function()){
+>>>>>>> 68035aadac436ac8b24ab4a3708ddf3ba9542678
        $("#nombre").html(
          obj.empleados[2].nombre + " " + obj.empleados[2].apellido);
   
         });
   });
 
+<<<<<<< HEAD
 </script>
+=======
+
+>>>>>>> 68035aadac436ac8b24ab4a3708ddf3ba9542678
 </body>
 </html>
