@@ -27,26 +27,26 @@
   '{"empleados":[' +
   '{ "nombre":"John", "apellido":"Doe" },'+
   '{ "nombre":"Anna", "apellido":"Smith" },'+
-  '{ "nombre":"Peter", "apellido":"Jones" }'
-  ]};
+  '{ "nombre":"Peter", "apellido":"Jones" }]}';
+ 
   var obj = JSON.parse(text);
-      $("boton1").click(function()){
+      $("boton1").click(function(){
        $("#nombre").html(
          obj.empleados[0].nombre + " " + obj.empleados[0].apellido);
   
         });
-        $("boton2").click(function()){
+        $("boton2").click(function(){
        $("#nombre").html(
          obj.empleados[1].nombre + " " + obj.empleados[1].apellido);
   
         });
-        $("boton3").click(function()){
+        $("boton3").click(function(){
        $("#nombre").html(
          obj.empleados[2].nombre + " " + obj.empleados[2].apellido);
   
         });
   });
 
-
+</script>
 </body>
 </html>
