@@ -10,7 +10,7 @@
     <title>JSON</title>
 </head>
 <body>
-    <h2 id=nombre></h2>
+    <h2 id="nombre"></h2>
     <button id="boton1"> Nombre 1</button>
     <button id="boton2"> Nombre 2</button>
     <button id="boton3"> Nombre 3</button>
@@ -30,23 +30,23 @@
 
   '{ "nombre":"Peter", "apellido":"Jones" }]}';
  
-  var obj = JSON.parse(text);
-      $("boton1").click(function(){
-
+      var obj = JSON.parse(text);
+        
+        $("#boton1").click(function(){
        $("#nombre").html(
          obj.empleados[0].nombre + " " + obj.empleados[0].apellido);
-  
         });
-        $("boton2").click(function(){
+
+        $("#boton2").click(function(){
        $("#nombre").html(
          obj.empleados[1].nombre + " " + obj.empleados[1].apellido);
-  
         });
-        $("boton3").click(function(){
+
+        $("#boton3").click(function(){
        $("#nombre").html(
          obj.empleados[2].nombre + " " + obj.empleados[2].apellido);
-  
         });
+
   });
 
 </script>
