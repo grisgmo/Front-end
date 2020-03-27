@@ -7,12 +7,11 @@
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
-    <title>JQuery 5 - Peliculas</title>
+    <title>JQuery 6 - Api fotos</title>
 </head>
 <body>
     <div class="container">
     <div class="row">
-    <input type="text" name="pelicula" id="pelicula"/>
     <button id="buscar" class="btn btn-primary">Buscar</button>
     </div>
     </div>
@@ -36,42 +35,28 @@
 
         <script>
         jQuery(document).ready(function() {
-            var api_key ="afa5a2e1";
+            
             $("#buscar").click(function(){
                 $.get(
-                    "https://www.omdbapi.com",
+                    "https://dog.ceo/api/breeds/image/random",
                 {
-                    apikey:api_key,
                     r:"json",
-                    s:$("#pelicula").val()
+                    s:$("#buscar").val()
                 },
                     function(data, status){
-                        //console.log(data);
+                    //console.log(data);
+                        var $message = "";
+                        var message = data.message;
                         
-                        var titulo = "";
-                        var year = "";
-                        var imdb = "";
-                        var poster = "";
-
-                        for (num = 0; num < data.Search.length; num++){
-                        titulo = data.Search[num].Title;
-                        year = data.Search[num].Year;
-                        imdb = data.Search[num].imbdID;
-                        poster = data.Search[num].Poster;
-
                         var resultado = 
                         '<div class="card" style="width: 18rem;"><img src="'+ 
-                            poster + 
-                            '" class=\2card-img-top" alt="..."><div class="card-body"><h5 class="card-title">Titulo: '+
-                            titulo +
-                            '</h5><p class="card-text">Año: ' +
-                                 year + 
-                                 '</p><p> class"card-text">IMDB: '+
-                                    imdb +
-                                    "</p></div></div>";
+                            message + 
+                            '" class=card-img-top" alt="..."></div> ';
                         $("#resultado").append(resultado);
                         }
-                });
+                       //console.log(data);  
+
+                );
             });
 
         });
