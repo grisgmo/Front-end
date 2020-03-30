@@ -7,27 +7,42 @@
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+		<link rel="stylesheet" 
+		href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		<link href="../bootstrap/css/all.css" rel="stylesheet">
+
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
+		crossorigin="anonymous">
     <title>JQuery 7-Formulario</title>
 </head>
 <body>
     <div class="container">
         <h1>Formulario</h1>
+	<form  form="signing">
+	
         <div class="row">
-        <input type="text" name="nombre" id="nombre"/>
-        <br><br>
-        <input type="text" name="apellido" id="apellido"/>
-        <br><br>
-        <input type="text" name="email" id="email"/>
-        <br><br>
-        <button id="su" class="btn btn-primary">Buscar</button>
+	<div class="col-md-12">
+	<i class="fas fa-user"></i>
+        Nombre: <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Nombre" required/>
+        <br>
+        Apellido: <input type="text" name="apellido" id="apellido" class="form-control" placeholder="Apellido" required/>
+        <br>
+        Email:<input type="text" name="email" id="email" class="form-control" placeholder="Email address" required autofocus/>
+        <br>
+        <button id="submit" type="submit" class="btn btn-primary">Enviar</button>
+	<button id="borrar" class="btn btn-primary">Borrar</button>
         </div>
         </div>
+	</div>
+	</form>
             <div class="row">
                 <div id="resultado" class="col-md-12"></div>
             </div>
     
-        </div>
-
+        
+	
         <script
         src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
@@ -43,30 +58,39 @@
         <script>
         jQuery(document).ready(function() {
             
-            $("#").click(function(){
-                $.get(
-                    "https://dog.ceo/api/breeds/image/random",
-                {
-                    r:"json",
-                    s:$("#buscar").val()
-                },
-                    function(data, status){
-                    //console.log(data);
-                        var $message = "";
-                        var message = data.message;
+		$("#submit").click(function(event) {
+         		event.preventDefault();
+
+          		var nombre=$("#nombre").val();
+
+			var apellido=$("#apellido").val();
+			
+			var email=$("#email").val();
+
+                        if(nombre==="" && apellido==="" && email===""){
+			$("#resultado").append("");
+			alert("Llena los campos vacios");	
+			}
+		else{ 
+			$("#resultado").append("");
+			var resultado = '<div class="text-center" >'+
+			"Nombre: "+ nombre + ", "+
+			"Apellido: "+ apellido +  ", "+
+ 			"email: "+ email +"</div>"
                         
-                        var resultado = 
-                        '<div class="card" style="width: 18rem;"><img src="'+ 
-                            message + 
-                            '" class=card-img-top" alt="..."></div> ';
                         $("#resultado").append(resultado);
-                        }
-                       //console.log(data);  
+		}
+		});
 
-                );
-            });
+		$("#borrar").click(function(event) {
+		event.preventDefault();
 
-        });
+			$("#nombre").val("");
+			$("#apellido").val("");
+			$("#email").val("");
+			
+
+        });});
         </script>
 
       </body>
