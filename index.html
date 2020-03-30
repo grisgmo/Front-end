@@ -1,12 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+<html>
+	<head>
+		<title> Archivos de la clase frontend</title>
+		<link rel="stylesheet" href="style.css">
+
 		<link rel="stylesheet" 
 		href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -15,83 +12,55 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
 		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
 		crossorigin="anonymous">
-    <title>JQuery 7-Formulario</title>
-</head>
-<body>
-    <div class="container">
-        <h1>Formulario</h1>
-	<form  form="signing">
-	
-        <div class="row">
-	<div class="col-md-12">
-	<i class="fas fa-user"></i>
-        Nombre: <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Nombre" required/>
-        <br>
-        Apellido: <input type="text" name="apellido" id="apellido" class="form-control" placeholder="Apellido" required/>
-        <br>
-        Email:<input type="text" name="email" id="email" class="form-control" placeholder="Email address" required autofocus/>
-        <br>
-        <button id="submit" type="submit" class="btn btn-primary">Enviar</button>
-	<button id="borrar" class="btn btn-primary">Borrar</button>
-        </div>
-        </div>
+	</head>
+
+	<body background-color="#">
+		<h1>Archivos Frontend</h1>
+		<h2>Griselda Maldonado</h2>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<a class="btn btn-primary" href="/pagina1/">
+					<i class="far fa-address-book"></i>Pagina 1</a>
+					<br><br>
+				<a class="btn btn-primary" href="\pagina2\">
+					<i class="fas fa-ad"></i>Pagina 2</a>
+					<br><br>
+				<a class="btn btn-primary" href="\ejemplo_Menu\index.html">
+					<i class="fas fa-adjust"></i>Menu-box</a>
+					<br><br>
+				<a class="btn btn-primary" href="\Botones_css\index.html">
+					<i class="fab fa-algolia"></i>Botones</a>
+					<br><br>
+				<!--<a class="btn btn-primary" href="\box\">
+					<i class="fas fa-align-justify"></i>Caja</a>
+					<br><br>
+				-->
+				<a class="btn btn-primary" href="\flexbox\">
+					<i class="fas fa-angle-double-up"></i>Galeria flexbox</a>
+					<br><br>
+				<a class="btn btn-primary" href="\bootstrap-4\index.html">
+					<i class="fas fa-apple-alt"></i>bootstrap-4</a>
+					<br><br>
+				<a class="btn btn-primary" href="\bootstrap\index.html">
+					<i class="far fa-arrow-alt-circle-right"></i>bootstrap</a>
+					<br><br>
+				<a class="btn btn-primary" href="\javascript\">
+					<i class="fas fa-ambulance"></i>Javascript</a>
+					<br><br>
+			</div>
+		</div>
 	</div>
-	</form>
-            <div class="row">
-                <div id="resultado" class="col-md-12"></div>
-            </div>
-    
-        
-	
-        <script
-        src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-        crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js">
-      </script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" 
+	integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" 
+	crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" 
+	integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" 
+	crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" 
+	integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" 
+	crossorigin="anonymous"></script>
 
-      </script>
-
-        <script>
-        jQuery(document).ready(function() {
-            
-		$("#submit").click(function(event) {
-         		event.preventDefault();
-
-          		var nombre=$("#nombre").val();
-
-			var apellido=$("#apellido").val();
-			
-			var email=$("#email").val();
-
-                        if(nombre==="" && apellido==="" && email===""){
-			$("#resultado").append("");
-			alert("Llena los campos vacios");	
-			}
-		else{ 
-			$("#resultado").append("");
-			var resultado = '<div class="text-center" >'+
-			"Nombre: "+ nombre + ", "+
-			"Apellido: "+ apellido +  ", "+
- 			"email: "+ email +"</div>"
-                        
-                        $("#resultado").append(resultado);
-		}
-		});
-
-		$("#borrar").click(function(event) {
-		event.preventDefault();
-
-			$("#nombre").val("");
-			$("#apellido").val("");
-			$("#email").val("");
-			
-
-        });});
-        </script>
-
-      </body>
-</html>
+	</body>
+</html
