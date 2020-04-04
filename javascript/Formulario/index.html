@@ -25,11 +25,11 @@
         <div class="row">
 	<div class="col-md-12">
 	<i class="fas fa-user"></i>
-        Nombre: <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Nombre" required/>
+        Nombre: <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Nombre" size="45" required/>
         <br>
-        Apellido: <input type="text" name="apellido" id="apellido" class="form-control" placeholder="Apellido" required/>
+        Apellido: <input type="text" name="apellido" id="apellido" class="form-control" placeholder="Apellido" size="45" required/>
         <br>
-        Email:<input type="text" name="email" id="email" class="form-control" placeholder="Email address" required autofocus/>
+        Email:<input type="text" name="email" id="email" class="form-control" placeholder="Email address" size="45" required/>
         <br>
         <button id="submit" type="submit" class="btn btn-primary">Enviar</button>
 	<button id="borrar" class="btn btn-primary">Borrar</button>
@@ -57,7 +57,7 @@
 
         <script>
         jQuery(document).ready(function() {
-            
+         
 		$("#submit").click(function(event) {
          		event.preventDefault();
 
@@ -69,17 +69,47 @@
 
                         if(nombre==="" && apellido==="" && email===""){
 			$("#resultado").append("");
-			alert("Llena los campos vacios");	
+			alert("Llena los campos vacios, todos los campos son obligatorios");	
 			}
+
 		else{ 
-			$("#resultado").append("");
+
+		function vanombre(nombre){
+		var vnombre= /^[A-Za-zñÑ-áéíóúÁÉÍÓÚ\s\t-]$/;
+		return vnombre.test(nombre) ? true : false;
+		}
+
+		function vape(apellido){
+		var vapellido = /^[A-Za-zñÑ-áéíóúÁÉÍÓÚ\s\t-]$/;
+		return vapellido.test(apellido) ? true : false;
+		}
+		
+		function validarEmail(email) {
+  		var regex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    		return regex.test(email) ? true : false;
+  		}
+		
+		function base(nombre,apellido,email){
+		$("#resultado").append("");
 			var resultado = '<div class="text-center" >'+
 			"Nombre: "+ nombre + ", "+
 			"Apellido: "+ apellido +  ", "+
  			"email: "+ email +"</div>"
                         
-                        $("#resultado").append(resultado);
+                return $("#resultado").append(resultado);
 		}
+
+   
+			if(vanombre(nombre) && vape(apellido) && validarEmail(email)){
+			base(nombre,apellido,email);
+			}
+			else{
+			 alert("La dirección de email es incorrecta, verifica nombre o apellido");
+		
+			}
+		
+		}
+
 		});
 
 		$("#borrar").click(function(event) {
@@ -90,7 +120,8 @@
 			$("#email").val("");
 			
 
-        });});
+        });
+	});
         </script>
 
       </body>
