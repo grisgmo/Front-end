@@ -1,0 +1,47 @@
+$text: black;
+$txt: white;
+body{
+    background: rgb(153, 225, 253);
+}
+.menu{
+    list-style: none;
+    background: rgb(161, 150, 46);
+    padding: 15px 5px;
+    max-width: 1024px;
+    margin: auto;
+}
+.menu li{
+    display: inline-block;
+    /*padding: 10px ;*/
+    /*border: 1px solid gray;*/
+}
+.menu li a{
+    @include fonts();
+    text-decoration: none;
+    padding: 10px ;
+    &:hover{
+        text-decoration: none;
+        background: rgb(68, 70, 38);
+        @include fonts();
+        text-transform: uppercase;
+        -webkit-text-decoration: uppercase;
+          text-decoration: uppercase;
+            border-bottom: 2px solid white;
+    }
+}
+@mixin centr(){
+    color: $text;
+    text-align: center;
+}
+@mixin fonts(){
+    color: $txt;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h1{
+    font-family: 'Inconsolata', monospace;
+    @include centr();
+}
+h2,p{
+    font-family: 'Dosis', sans-serif;
+    @include centr();
+}
