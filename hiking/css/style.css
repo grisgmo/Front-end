@@ -45,3 +45,39 @@ h2{
 h1{
     font-weight: 800;
 }
+.h-gris{
+    color: #a2a2a2;
+}
+.h-footer{
+    font-weight: 800;
+    color: white;
+    background: black;
+    padding: 5px;
+    display: inline-block;
+}
+.fondo-bosque{
+    background-image: url("../img/fondo2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px; 
+    padding-top: 160px ;
+    color: white;
+    
+}
+
+.icono-social{
+    background: black;
+    color: white;
+    border-radius: 100%;
+    padding: 10px;
+}
+.icono-social:hover{
+    color: white;
+}
+.fondo-gris{
+    background: #f3f3f3;
+    margin: 7% 2% 3% 2%;
+    padding: 4% 3%;
+    
+}
