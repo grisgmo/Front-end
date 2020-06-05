@@ -1,12 +1,17 @@
+body{
+    font-family: "Monserrat", sans-serif;
+}
+h1{
+    font-weight: 700;
+}
 .header{
-background-image: url('img/seccion1.png');
-background-size: 100% auto;
+background-image: url("../img/seccion1.png");
+background-size: cover;
 background-repeat: no-repeat;
-height: 1093px;
-
+height: 920px;
 }
 
-#navabarNav ul li a{
+#navbarNav ul li a{
     color: white;
     text-transform: uppercase;
     font-weight: bold;
@@ -18,18 +23,245 @@ height: 1093px;
     text-transform: uppercase;
     color: white;
 }
+.h-blanco2{
+    color: white;
+}
 .h-rosa{
     text-transform: uppercase;
+    color: #ff7f7f;
+}
+.txt-rosa{
     color: #ff7f7f;
 }
 .p-blanco{
     color: white;
 }
 .btn-blanco{
-    padding: 10px 30px;
+    padding: 10px 40px;
     background: white;
     color: #ff7f7f;
-    border-radius: 35px;
-    
+    border-radius: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.btn-blanco:hover{
+    text-decoration: none;
+    color: #ff7f7f;
+}
+
+.btn-rosa{
+    padding: 10px 40px;
+    background: #ff7f7f;
+    color: white;
+    border-radius: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.btn-rosa:hover{
+    text-decoration: none;
+    color: white;
+}
+
+.espacio-seccion1{
+    margin-top: 70px;
+}
+.seccion2{
+    background: #ff7f7f;
+    color: white;
+}
+.img-sushi2{
+    margin-top: -55px;
+}
+.img-sushi3{
+    margin-top: 55px;
+}
+.img-sushi4{
+    margin-top: -55px;
+}
+.seccion3{
+    padding-top: 110px;
+}
+.seccion4{
+    background: #ff7f7f;
+    color: white;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.seccion3-txt{
+    margin-top: 140px ;
+}
+.circulo{
+    border: 5px solid white;
+    border-radius: 100px;
+    padding: 20px;
+    margin-top: 10px;
+    display: inline-block;
+    width: 180px;
+    height: 180px;
+}
+.circulo h1{
+    text-transform: uppercase;
+}
+.seccion5{
+    background-image: url("../img/seccion3.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1000px;
+    padding-top: 300px;
+}
+.seccion6{
+    background-image: url("../img/seccion6.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1000px;
+    padding-top: 200px;
+}
+.col1-seccion6{
+    padding-top: 130px;
+}
+.col2-seccion6{
+    padding-top: 200px;
+}
+.col3-seccion6{
+    padding-top: 65px;
+}
+.f-txt{
+    background: #f4f4f4;
+    padding: 10px 40px;
+    border-radius: 15px;
+    border: none;
+    width: 450px;
+}
+.f-btn{
+    background: #ff7f7f;
+    padding: 10px 40px;
+    border-radius: 15px;
+    text-transform: uppercase;
+    color: white;
+    border: none;
+    font-weight: 800;
+    margin-left: -20px;
+}
+.col4-seccion6{
+    padding-top: 100px ;
+}
+.seccion7{
+    background-color: #111111;
+    color: white;
+}
+.seccion7 h2{
+    color: white;
+}
+.menu-footer{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.menu-footer li a{
+    color: white;
+}
+.menu-footer li a:hover{
+    color: white;
+}
+.img-sushi-footer{
+    margin-top: -200px;
+    padding-right: 100px ;
+}
+.icono-social{
+    background: white;
+    color: black;
+    border-radius: 100%;
+    padding: 20px 20px;
+
 
 }
+.icono-social:hover{
+    color: black;
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .header {
+        height: 800px;
+        }
+}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .header {
+        height: 800px;
+        }
+}
+@media (min-width: 1024px) {
+    .header{
+        height: 800px;
+    }
+
+}
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .header{
+        height: 700px;
+    }
+}
+
+@media (min-width: 1600px) {
+}
+
+@media (max-width: 1400px) {
+    .header{
+        height: 1000px;
+    }
+}
+@media (max-width: 1700px) {
+    .header{
+        height: 950px;
+    }
+}
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+}
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+    .header{
+        height: 620px;
+    }
+}
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+    .header{
+        height: 600px;
+    }
+}
+@media (max-width: 820.98px) {
+    .header{
+        height: 600px;
+    }
+}
+@media (max-width: 920.98px) {
+    .header{
+        height: 600px;
+    }
+}
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .header {
+    height: 600px;
+    }
+    .img-sushi1{
+        /* margin-top: 0;*/
+        display: none;
+     }
+    .img-sushi2{
+       /* margin-top: 0;*/
+       display: none;
+    }
+    .img-sushi3{
+        display: none;
+     }
+    .img-sushi4{
+       display: none;
+    }
+  }
+  
